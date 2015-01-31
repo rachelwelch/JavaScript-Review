@@ -117,7 +117,13 @@ each(names, function(item, indice){
 
 /* NEXT PROBLEM - NEXT PROBLEM - NEXT PROBLEM */
 
-
+var getUserById = function(str, arr, cb) {
+  for (var i = 0; i < arr.length; i++) {
+    if (arr[i].id === str) {
+      cb(arr[i]);
+    }
+  }
+}
 
 
 var users = [
@@ -149,7 +155,13 @@ getUserById('16t', users, function(user){
 
 /* NEXT PROBLEM - NEXT PROBLEM - NEXT PROBLEM */
 
-
+var find = function(arr, cb) {
+  for (var i = 0; i < arr.length; i++) {
+    if (cb(arr[i])) {
+      return arr[i];
+    }
+  }
+}
 
 
 //Looks through each value in the list, returning the first one that passes a truth test 
@@ -157,3 +169,11 @@ var numbers  = [1, 2, 3, 4, 5, 6];
 find(numbers, function(num){ 
   return num % 2 == 0; //should return 2
 })
+
+
+
+
+
+
+
+
