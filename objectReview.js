@@ -82,8 +82,43 @@ var user = {
 
 
 
-//write a function called voweler that accepts a string, and returns an object with the keys being all the vowels in that string, and the values being how many times that particular vowel was in the string.
+//write a function called voweler that accepts a string, and returns an object with the keys being all the 
+//vowels in that string, and the values being how many times that particular vowel was in the string.
 //voweler("This is a test") --> {i: 2, a: 1, e: 1};
+
+var voweler = function(str) {
+  var vowelObj = {a:0, e:0, i:0, o:0, u:0}
+  var strArr = str.split('');
+  for (var i = 0; i < strArr.length; i++) {
+    if (strArr[i] === 'a') {
+      vowelObj.a++;
+    } else if (strArr[i] === 'e') {
+      vowelObj.e++;
+    } else if (strArr[i] === 'i') {
+      vowelObj.i++;
+    } else if (strArr[i] === 'o') {
+      vowelObj.o++;
+    } else if (strArr[i] === 'u') {
+      vowelObj.u++;
+    }
+  }
+  for (var j in vowelObj) {
+    if (!vowelObj[j]) {
+      delete vowelObj[j];
+    }
+  }
+  return vowelObj;
+}
+
+voweler("This is a test");
+
+
+
+
+
+
+
+
 
 
 
