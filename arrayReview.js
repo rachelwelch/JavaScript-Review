@@ -124,8 +124,9 @@ var theOdyssey = "function expression or function declaration? Tis an obvious ch
 var vowelCounter = function(str) {
 	var strArr = str.split('');
 	var newArr = [];
+	var obj = {a: true, e: true, i: true, o: true, u:true}
 	for(var i = 0; i < strArr.length; i++) {
-		if (strArr[i] === 'a' | 'e' | 'i') {
+		if (obj[strArr[i]]) {
 			newArr.push(strArr[i]);
 		}
 	}
