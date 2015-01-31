@@ -32,15 +32,14 @@ last(names, function(lastName){
 
 //have the contains function return a boolean value for if the name is in the array or not. !!!!!!!!!!!!!!
 
-var contains = function(arr, str, cb) {
-    var yes = false;
+var contains = function(str, arr, cb) {
+    var isPresent = false;
     for (var i = 0; i < arr.length; i++) {
       if (arr[i] === str) {
-        yes = true;
-        break;
+        isPresent = true;
       }
-      cb(yes);
     }
+    cb(isPresent);
   }
 
 var names = ['Tyler', 'Cahlan', 'Ryan', 'Colt', 'Tyler', 'Blaine', 'Cahlan'];
