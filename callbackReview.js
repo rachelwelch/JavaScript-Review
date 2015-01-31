@@ -77,7 +77,17 @@ map(numbers, function(num){
 
 /* NEXT PROBLEM - NEXT PROBLEM - NEXT PROBLEM */
 
-
+var uniq = function(arr, cb) {
+  var uniqObj = {};
+  var uniqArr = [];
+  for (var i = 0; i < arr.length; i++) {
+    uniqObj[arr[i]] = null;
+  }
+  for (var key in uniqObj) {
+    uniqArr.push(key);
+  }
+  cb(uniqArr);
+}
 
 
 var names = ['Tyler', 'Cahlan', 'Ryan', 'Colt', 'Tyler', 'Blaine', 'Cahlan'];
@@ -90,12 +100,16 @@ uniq(names, function(uniqArr){
 
 /* NEXT PROBLEM - NEXT PROBLEM - NEXT PROBLEM */
 
-
+var each = function(arr, cb) {
+  for (var i = 0; i < arr.length; i++) {
+    cb(arr[i], i);
+  }
+}
 
 
 var names = ['Tyler', 'Cahlan', 'Ryan', 'Colt', 'Tyler', 'Blaine', 'Cahlan'];
 each(names, function(item, indice){
-  console.log('The item in the ' + indice + 'position is ' + item)
+  console.log('The item in the ' + indice + ' position is ' + item)
 });
 
 
