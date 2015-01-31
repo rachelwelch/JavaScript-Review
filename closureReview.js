@@ -24,5 +24,25 @@ Once completed, add a second arguments that allows the function to be executed N
 
 */
 
+var first = function(cb, n) {
+    var counter = 0;
+    return function() {
+      counter += 1;
+      if (counter < n) {
+        return cb();
+      } else {
+        console.log('Stop');
+      }
+    }
+  }
+
+  var second = first(function() {
+    alert("Rachel");
+  }, 5);
+  second();
+
+
+
+
 
 
