@@ -80,7 +80,15 @@ alert(second) //[1,2,3,4,5,6,7];
 //write a function called longest that takes in our sentence variable, and returns the longest word in that sentence.
 var sentence = "Dev Mountain is the best"
 
-  //code here
+  var longest = function(str) {
+  	var wordArr = str.split(" ");
+  	wordArr.sort(function(a, b) {
+  		return b.length - a.length;
+  	})
+  	return wordArr[0];
+  }
+
+  longest(sentence);
 
 
 /* NEXT PROBLEM - NEXT PROBLEM - NEXT PROBLEM */
@@ -91,7 +99,18 @@ var sentence = "Dev Mountain is the best"
 var myPoem = 'What is a jQuery but a misunderstood object?'
 //What is a jQuery but a misunderstood object? --> What Is A JQuery But A Misunderstood Object?
 
-  //code here
+  var capitalize = function(str) {
+  	var strArr = str.split(' ');
+  	var newArr = [];
+  	for(var i = 0; i < strArr.length; i++) {
+  		var FirstLetter = strArr[i].charAt(0).toUpperCase();
+    	var restOfWord = strArr[i].slice(1);
+    	newArr[i] = FirstLetter + restOfWord;
+  	}
+  	return newArr.join(' ');
+  }
+
+  capitalize(myPoem);
 
 
 
@@ -101,3 +120,29 @@ var myPoem = 'What is a jQuery but a misunderstood object?'
 
 var theOdyssey = "function expression or function declaration? Tis an obvious choice";
 //Write a function called vowelCounter that takes in a string (theOdyssey) and returns how many vowels are in that string.
+
+var vowelCounter = function(str) {
+	var strArr = str.split('');
+	var newArr = [];
+	for(var i = 0; i < strArr.length; i++) {
+		if (strArr[i] === 'a' | 'e' | 'i') {
+			newArr.push(strArr[i]);
+		}
+	}
+	return newArr.length;
+}
+
+vowelCounter(theOdyssey);
+
+
+
+
+
+
+
+
+
+
+
+
+
