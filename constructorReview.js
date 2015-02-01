@@ -5,7 +5,7 @@
     this.name =name;
     this.legs = legs;
     this.color = color;
-    this.food = food;
+    this.food = [];
   }
 
 
@@ -28,8 +28,8 @@
 
 //Create two instances of Animal and push those into your animal array
 
-  animalArr.push(new Animal('mammal', 'giraffe', 4, 'orange', 'leaves'));
-  animalArr.push(new Animal('mammal', 'dolphin', 0, 'gray', 'fish'));
+  animalArr.push(new Animal('mammal', 'giraffe', 4, 'orange', ['leaves', 'grass']));
+  animalArr.push(new Animal('mammal', 'dolphin', 0, 'gray', ['fish', 'seaweed']));
 
 
 //Create two instances of person and push those into your person array.
@@ -41,7 +41,10 @@
 //Now we want every instance of Animal to have a eat method. This method will choose a random item in that instances 
 //food array, then alert "(name) ' ate ' (whichever food was chosen)".
 
-  //code here
+  var eat = new Animal(function(food){
+    var randomFood = food[Math.floor(Math.random() * food.length)];;
+    alert(Animal.name + ' ate ' + randomFood);
+  });
 
 
 //At this point, if we wanted to add something to every istance of person could we? 
