@@ -12,9 +12,11 @@
 //Now create a person function that creates an object and returns it (not in constructor form) 
 //that has the following parameters. name, age, height, gender
 
-  var Person = function() {
-    var personObj = {name, age, height, gender};
-    return personObj;
+  var Person = function(name, age, height, gender) {
+    this.name = name;
+    this.age = age;
+    this.height = height;
+    this.gender = gender;
   }
 
 
@@ -36,7 +38,8 @@
   personArr.push(new Person('Bobby', 26, '5 ft. 9 in.', 'male'));
 
 
-//Now we want every instance of Animal to have a eat method. This method will choose a random item in that instances food array, then alert "(name) ' ate ' (whichever food was chosen)".
+//Now we want every instance of Animal to have a eat method. This method will choose a random item in that instances 
+//food array, then alert "(name) ' ate ' (whichever food was chosen)".
 
   //code here
 
