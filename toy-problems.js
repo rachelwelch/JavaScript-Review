@@ -7,7 +7,19 @@ Write a function that takes an array of integers and returns the sum of the inte
 plusOneSum([1, 2, 3, 4]); // 14
 
 */
-
+var plusOneSum = [1, 2, 3, 4];
+var sumInt = function(arr) {
+	var newArr = [];
+	var sum = 0
+	for (var i = 0; i < arr.length; i++) {
+		newArr.push(arr[i] + 1);
+	}
+	for(var j = 0; j < newArr.length; j++) { 
+		sum += newArr[j]; 
+	}
+	return sum;
+}
+sumInt(plusOneSum);
 
 
 /*
