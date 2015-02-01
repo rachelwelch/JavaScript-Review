@@ -22,13 +22,12 @@ var sumInt = function(arr) {
 sumInt(plusOneSum);
 
 
-/*
 
-Write a function that accepts a multi dimensional array and returns a flattened version.
 
-flatten([1, 2, [3, [4], 5, 6], 7]) // [1, 2, 3, 4, 5, 6, 7]
+// Write a function that accepts a multi dimensional array and returns a flattened version.
 
-*/
+var flattenArr = [1, 2, [3, [4], 5, 6], 7]; // [1, 2, 3, 4, 5, 6, 7]
+
 
 
 
@@ -37,21 +36,25 @@ flatten([1, 2, [3, [4], 5, 6], 7]) // [1, 2, 3, 4, 5, 6, 7]
 Given an array [a1, a2, ..., aN, b1, b2, ..., bN, c1, c2, ..., cN] convert it to [a1, b1, c1, a2, b2, c2, ..., aN, bN, cN]
 
 */
+var arr = [a1, a2, a3, b1, b2, b3, c1, c2, c3];
+
 
 
 /*
 
-There is an array of non-negative integers. A second array is formed by shuffling the elements of the first array and deleting a random element. Given these two arrays, find which element is missing in the second array.
+There is an array of non-negative integers. A second array is formed by shuffling the elements of the first array 
+and deleting a random element. Given these two arrays, find which element is missing in the second array.
 
 */
-
+var notNegInt = [1, 4, 3, 6, 9, 2];
 
 
 
 
 /*
 
-Write a function that returns the longest word(s) from a sentence. The function should not return any duplicate words (case-insensitive).
+Write a function that returns the longest word(s) from a sentence. 
+The function should not return any duplicate words (case-insensitive).
 
 Example
 
@@ -73,9 +76,17 @@ Find the sum of all the multiples of 3 or 5 below 1000.
 
 /*
 
-Remove duplicate characters in a given string keeping only the first occurrences. For example, if the input is ‘tree traversal’ the output will be "tre avsl".
+Remove duplicate characters in a given string keeping only the first occurrences.  !!!!!!!!!!!!!
+For example, if the input is ‘tree traversal’ the output will be "tre avsl".
 
 */
+var string = 'tree traversal';
+var fn = function(str) {
+	str.split('');
+	return str;
+}
+
+fn(string);
 
 
 
@@ -86,3 +97,22 @@ console.log(sum(2,3));   // Outputs 5
 console.log(sum(2)(3));  // Outputs 5
 
 */
+
+var outside = function(a, b) {
+	if (a, b) {
+		return a + b;
+	} else {
+	function inside(b) {
+		return a + b;
+	}
+}
+	return inside;
+}
+console.log(outside(2,3));
+console.log(outside(2)(3));
+
+
+
+
+
+
