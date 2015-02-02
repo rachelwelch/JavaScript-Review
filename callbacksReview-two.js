@@ -47,7 +47,11 @@ var songs =
 //Inside your setter function first add the first parameter, or the song object, to the end of your songs array.
 //Once you do that, call your callback (getter) function which should get the songs and return them.
   
-  var setter = function(obj, cb) {
-    songs.push(obj);
-    cb(getter())
+  var setter = function(arr, newObj, cb) {
+    arr.push(newObj);
+    return cb();
   }
+
+  var obj = {"wrapperType":"track", "kind":"song", "artistId":351794};
+
+  setter(songs, obj, getter);
