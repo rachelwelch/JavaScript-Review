@@ -28,6 +28,19 @@ sumInt(plusOneSum);
 
 var flattenArr = [1, 2, [3, [4], 5, 6], 7]; // [1, 2, 3, 4, 5, 6, 7]
 
+var flatten = function(array) {
+  var result = [], self = arguments.callee;
+  array.forEach(function(item) {
+    Array.prototype.push.apply(
+      result,
+      Array.isArray(item) ? self(item) : [item]
+    );
+  });
+  return result;
+};
+
+flatten(flattenArr);
+
 
 
 
