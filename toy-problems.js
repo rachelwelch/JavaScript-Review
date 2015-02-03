@@ -49,7 +49,16 @@ flatten(flattenArr);
 Given an array [a1, a2, ..., aN, b1, b2, ..., bN, c1, c2, ..., cN] convert it to [a1, b1, c1, a2, b2, c2, ..., aN, bN, cN]
 
 */
-var arr = [a1, a2, a3, b1, b2, b3, c1, c2, c3];
+var arr = ['a1', 'a2', 'a3', 'b1', 'b2', 'b3', 'c1', 'c2', 'c3'];
+
+arr.sort(function (a, b) {
+        var aVals = a.match(/(\D*)(\d*)/),
+            bVals = b.match(/(\D*)(\d*)/),
+            weighted = [a[0] > b[0] ? 1 : a[0] < b[0] ? -1 : 0, b[1] - a[1]] //[string,number]
+    
+        return weighted[0] - 2 * weighted[1] // give the number a double weight
+    
+    })
 
 
 
