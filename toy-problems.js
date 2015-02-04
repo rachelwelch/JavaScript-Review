@@ -61,14 +61,27 @@ arr.sort(function (a, b) {
     })
 
 
-
 /*
 
 There is an array of non-negative integers. A second array is formed by shuffling the elements of the first array 
 and deleting a random element. Given these two arrays, find which element is missing in the second array.
+!!!!!!!!!!!!!!!!!!!!!
 
 */
 var notNegInt = [1, 4, 3, 6, 9, 2];
+var deleteNum = function(arr) {
+	var newArr = [];
+	newArr.push(arr.slice());
+	var randInt = Math.floor(Math.random() * newArr.length);
+	for (var i = 0; i < newArr.length; i++) {
+	  if (newArr[i] === randInt) {
+	    newArr.splice(newArr[i], 1);
+	  }
+	}
+	return newArr; 
+}
+
+deleteNum(notNegInt);
 
 
 
@@ -86,6 +99,25 @@ longestWords("Buffalo buffalo Buffalo buffalo buffalo buffalo Buffalo buffalo") 
 
 */
 
+var longestWords = function(str) {
+	str = str.split(" ");
+	var longest = [];
+	var count = 0;
+	for (var i = 0; i < str.length; i++) {
+		if (str[i].length === count) {
+			longest.push(str[i]);
+		} else if (str[i].length >= count) {
+			longest = [];
+			count = str[i].length;
+			longest.push(str[i]);
+		}
+	}
+	return longest;
+}
+
+longestWords("You are just an old antidisestablishmentarian");
+longestWords("I gave a present to my parents");
+longestWords("Buffalo buffalo Buffalo buffalo buffalo buffalo Buffalo buffalo");
 
 /*
 
