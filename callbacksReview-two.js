@@ -55,3 +55,13 @@ var songs =
   var obj = {"wrapperType":"track", "kind":"song", "artistId":351794};
 
   setter(songs, obj, getter);
+
+
+  //////
+
+  var setter = function(newSong, cb) {
+    songs.push(newSong);
+    return cb();
+  }
+
+  setter({artist: 'pink floyd', song: 'Dark Side of the Moon'}, getter);
